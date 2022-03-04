@@ -1489,11 +1489,31 @@
 
 ##  
 
-#### 198. Where does kub-proxy run?
+#### 198. Where does kube-proxy run?
 
      Answer:  On each node. You can think of this as any other network proxy (e.g. HAProxy or Nginx or Squid) running on each node managing traffic in and out of nodes.
 
 ##   
 
 
+##  
+
+#### 199. Why are there 3 versions of NGINX ingress controller for Kubernetes?
+
+     Answer:  1. One made by Kubernetes Community
+              2. One made by Nginx (Open Source)
+              3. One made by Nginx (NOT Free)
+
+
+##   
+
+
+##  
+
+#### 200. Why would you go with Nginx Ingress Controller (and not the Kubernetes Community One)
+
+     Answer:  With Nginx one, you get HTTP Load Balancing (You don't get with community one)
+     Source: https://www.youtube.com/watch?v=OM_N0jjghqI
+
+##
 
