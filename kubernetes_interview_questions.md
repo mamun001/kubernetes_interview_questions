@@ -1417,3 +1417,30 @@
      Answer: Service's IP NEVER changes. You can point DNS to it. Behind the "service" are the ephemeral pods.
 
 ##
+
+#### 190. (Real Interview Question asked 2022): You run "k get po" and you ass a pod that is in "completed" state. What does that mean?
+
+     Answer: This means that pod came up, did its job and finished. It did not crash. It is not running. You can still get to its logs
+
+
+##  
+
+#### 191. (Real Interview Question asked 2022): What kind of troubleshooting have you done in Kubernetes?
+
+     Answer: This depends on your experience, but some ideas include ingress, capacity, pods crashing, slow service, certificate expiring etc.
+
+##  
+
+
+##  
+
+#### 192. (Real Interview Question asked 2022): How is Anthos Service Mesh compared to Istio?
+
+
+     Answer: Anthos Service Mesh is managed service. It is cheap ($50 a month for 100 endpoints per cluster as of Jan 2022). It comes with dashboards automatically. So, definitely a good choice. Also, no more hassles of upgrading Istio.
+
+##  
+
+
+
+
