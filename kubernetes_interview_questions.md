@@ -1432,15 +1432,68 @@
 ##  
 
 
+
 ##  
 
 #### 192. (Real Interview Question asked 2022): How is Anthos Service Mesh compared to Istio?
-
 
      Answer: Anthos Service Mesh is managed service. It is cheap ($50 a month for 100 endpoints per cluster as of Jan 2022). It comes with dashboards automatically. So, definitely a good choice. Also, no more hassles of upgrading Istio.
 
 ##  
 
+
+##  
+
+#### 193. Who manages virtual IPs of services?
+
+     Answer: kube-proxy
+
+##   
+
+
+##  
+
+#### 194. What component of Kubernetes is basically a crude Load Balancer?
+
+     Answer: service
+
+##   
+
+
+##  
+
+#### 195. in GKE, how is Ingress implemented by default?
+
+     Answer:  a Load Balancer behind the scene
+
+##   
+
+
+##  
+
+#### 196. Ingress works at which OSI layer?
+
+     Answer:  Layer 7 (HTTP or HTTPS)
+
+##   
+
+
+##  
+
+#### 197. Validating YAML file is a pain? How do you do that?
+
+     Answer:  Open Source Tools like Terrasan or Kubeval work great.
+
+##   
+
+
+##  
+
+#### 198. Where does kub-proxy run?
+
+     Answer:  On each node. You can think of this as any other network proxy (e.g. HAProxy or Nginx or Squid) running on each node managing traffic in and out of nodes.
+
+##   
 
 
 
