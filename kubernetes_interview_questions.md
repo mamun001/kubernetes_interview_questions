@@ -1518,7 +1518,7 @@
 ##
 
 
-##  
+## ............  
 
 #### 201. When impleneting Prometheus, why is it best use the Adapter pattern?
 
@@ -1527,7 +1527,7 @@
 ##
 
 
-##  
+## ............
 
 #### 202. What is Kubelet and where does it run?
 
@@ -1537,7 +1537,7 @@
 
 
 
-##  
+##  ...........
 
 #### 203. (Actual interview question 2022): What is the difference between Docker Compose and Kubernetes ?
 
@@ -1548,13 +1548,24 @@
 
 
 
-##  ..
+##  ........
 
 #### 204. What is kubeadm used for?
 
      Answer:  To deploy Kubernetes on existing VMs kind of by hand (running commands for master node and worker nodes)
 
 ##
+
+
+
+## .......... 
+
+#### 205. When we run "kubectl run pods" , that gets to the API server on the master node. What does the API server do with that request?
+
+     Answer:  It gives it to the kubelet on one worker node
+
+##
+
 
 
 
