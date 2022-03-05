@@ -1527,6 +1527,36 @@
 ##
 
 
+##  
+
+#### 202. What is Kubelet and where does it run?
+
+     Answer:  Main agent on the worker nodes 
+
+##
+
+
+
+##  
+
+#### 203. (Actual interview question 2022): What is the difference between Docker Compose and Kubernetes ?
+
+     Answer:  Docker Compose: Simple way to run multi-container Docker Applications (defined in YAML file)
+              Kubernetes: It is a full-fledge Orchestration Tool
+
+##
+
+
+
+##  ________________________________ 
+
+#### 204. What is kubeadm used for?
+
+     Answer:  To deploy Kubernetes on existing VMs kind of by hand (running commands for master node and worker nodes)
+
+##
+
+
 
 
 
