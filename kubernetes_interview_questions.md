@@ -1517,3 +1517,17 @@
 
 ##
 
+
+##  
+
+#### 201. When impleneting Prometheus, why is it best use the Adapter pattern?
+
+     Answer: Because otherwise, you will have re-write each application "data" to the format that Prometheus expects. The prometheus sidecar will do that and send the data along w/o you having to modify the application container.
+
+##
+
+
+
+
+
+
