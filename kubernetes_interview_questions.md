@@ -1,6 +1,6 @@
 
 
-# ................... 181 Kubernetes Interview Questions  ....................
+# ................... 204 Kubernetes Interview Questions  ....................
 
 ## By  Mamun Rashid :: https://www.linkedin.com/in/mamunrashid/ :: Please connect with me.
 
@@ -1548,7 +1548,7 @@
 
 
 
-##  ________________________________ 
+##  ..
 
 #### 204. What is kubeadm used for?
 
