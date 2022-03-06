@@ -1,10 +1,10 @@
 
 
-# ................... 204 Kubernetes Interview Questions  ....................
+# ................... 206 Kubernetes Interview Questions  ....................
 
 ## By  Mamun Rashid :: https://www.linkedin.com/in/mamunrashid/ :: Please connect with me.
 
-### Last Updated: 2021.03.09
+### Last Updated: 2022.03.05
 
 ##
 
@@ -31,7 +31,8 @@
 ######     k. stateful sets 
 ######     l. created CSRs and signed certificates
 
-##
+
+## ........
 
 #### 2. You have 2 different contexts (A and B). Context A has a secret named foo. Context B does not. What would be a quick way to create the same exact secret in Context B?
 
@@ -42,7 +43,7 @@
        4. kubectl apply -f foo.yaml
 
 
-##
+## ......
 
 #### 3.  There are more than one way to implement Ingress? What did you use to implement Ingress?
 
@@ -51,7 +52,7 @@
              See below for a longer list.
 
 
-##
+## ......
 
 #### 4. Why do we need Kubernetes? What problems does it solve?
 
@@ -1565,6 +1566,24 @@
      Answer:  It gives it to the kubelet on one worker node
 
 ##
+
+## .......... 
+
+#### 206. How do you combine kubectl and jsonpath to get the info you need?
+
+     Answer:  You use -o=jsonpath="......blah...." to basically query the output that you get from kubectl to get precisely what you need.
+
+##
+
+## .......... 
+
+#### 207. How do you deploy a stateless application on Kubernetes?
+
+     Answer: Simply use "deployments"  (Not statefulset  or replicasets)
+
+##
+
+
 
 
 
