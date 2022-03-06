@@ -70,11 +70,17 @@
 
               Kubernetes solves these problems.
 
+
+## .
+
+
 ## .....
 
 #### 5. What is the different between Ingress and Ingress Controller:
 
     Answer: Ingress Controller FULFILLS ingress requirements
+
+## .
 
 
 ## .....
@@ -83,11 +89,18 @@
 
     Answer: Load Balancers
 
+## .
+
+
+## .....
 
 #### 7. Kubernetes as a project supports and maintains which 3 Ingress Controllers?
 
     Answer: AWS, GCE, and nginx ingress controllers.
             (This is straight from Kubernetes documentation)
+
+## .
+
 
 ## .....
 
@@ -106,6 +119,8 @@
     i. Ambassador (envoy-based)
     j. Enroute (another envoy-based Ingress Controller)
     (and more)
+
+## .
 
 
 ## .....
@@ -1625,6 +1640,21 @@
      Answer:  Create SHA256 Hash  of the binary and compare the message digest with the one given on the official web site.
 
 ## . 
+
+
+## .......... 
+
+#### 212. (Not really an interview question, more a real life question) . You are trying to run a pod with "kubectl run" command, but running into issues with exact formats and options, what do you do (besides googling)?
+
+     Answer:  kubectl run -h
+
+## . 
+
+
+
+
+
+
 
 
 
