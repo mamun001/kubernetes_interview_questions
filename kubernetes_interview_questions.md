@@ -1,10 +1,10 @@
 
 
-# ................... 209 Kubernetes Interview Questions  ....................
+# ................... 211 Kubernetes Interview Questions  ....................
 
 ## By  Mamun Rashid :: https://www.linkedin.com/in/mamunrashid/ :: Please connect with me.
 
-### Last Updated: 2022.03.05
+### Last Updated: 2022.03.06
 
 ##
 
@@ -42,6 +42,7 @@
        3. Switch to Context B
        4. kubectl apply -f foo.yaml
 
+## .
 
 ## ......
 
@@ -50,6 +51,8 @@
     Answer:  So, ingress is IMPLEMENTED by Ingress Controllers. There are at least 12.
              Most common is a Load Balancer. Another popular one is Nginx Ingress Controller.
              See below for a longer list.
+
+## .
 
 
 ## ......
@@ -1590,7 +1593,7 @@
 
      Answer: Nothing but an IP and a port. That's it.
 
-##
+## .
 
 
 ## .......... 
@@ -1601,8 +1604,27 @@
              When a Service is created based on a "match" with a pod (or pods), Kubernetes automatically creates an Endpoint to the pod's IP and port.
              SERVICE ---> ENDPOINT (automaticlaly created) --> POD'S IP and PORT
 
-##
+## .
 
+
+## .......... 
+
+#### 210. How can you access the kubelet API?
+
+     Answer:  Two ways:
+              1. Using a curl command and pointing to 10250 port of a worker node OR
+              2. Opensource tool called kubeletctl
+
+## 
+
+
+## .......... 
+
+#### 211. How can you verify that your binary executables (Kubernetes) have not been corrupted?
+
+     Answer:  Create SHA256 Hash  of the binary and compare the message digest with the one given on the official web site.
+
+## . 
 
 
 
