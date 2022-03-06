@@ -1,6 +1,6 @@
 
 
-# ................... 206 Kubernetes Interview Questions  ....................
+# ................... 209 Kubernetes Interview Questions  ....................
 
 ## By  Mamun Rashid :: https://www.linkedin.com/in/mamunrashid/ :: Please connect with me.
 
@@ -67,13 +67,14 @@
 
               Kubernetes solves these problems.
 
-##
+## .....
 
 #### 5. What is the different between Ingress and Ingress Controller:
 
     Answer: Ingress Controller FULFILLS ingress requirements
 
-##
+
+## .....
 
 #### 6. Most common type of Ingress Controller?
 
@@ -85,7 +86,7 @@
     Answer: AWS, GCE, and nginx ingress controllers.
             (This is straight from Kubernetes documentation)
 
-##
+## .....
 
 #### 8. Besides those 3, what other ingress controllers are there?
 
@@ -103,8 +104,8 @@
     j. Enroute (another envoy-based Ingress Controller)
     (and more)
 
-##
 
+## .....
 
 #### 9. How would one start up a Kubernetes cluster to deploy containers/pods on (in GCP)?
 
@@ -116,8 +117,7 @@
        e. Google Deployment Manager
        
 
-##
-
+## .....
 
 #### 10.   If a container keeps crashing, how do you troubleshoot?
 
@@ -148,7 +148,7 @@
 
 #### 13. How have you used RBAC with Kubernetes ?
 
-    Answer: Answer will depend on your use case. One possible answer is to have service accounts that do certain things within the cluster.
+    Answer: Answer will depend on your use case. One possible answer is to have Service accounts that do certain things within the cluster.
             By the way, RBAC in Kubernetes is just AWS IAM Policies and Bindings. In RBAC, you have subjects (who gets the permission), verbs (what can the subject actually do), and rolebinding (subject linking to roles) and roles.
 
 
@@ -1580,6 +1580,26 @@
 #### 207. How do you deploy a stateless application on Kubernetes?
 
      Answer: Simply use "deployments"  (Not statefulset  or replicasets)
+
+##
+
+
+## .......... 
+
+#### 208. What is an endpoint in Kubernetes?
+
+     Answer: Nothing but an IP and a port. That's it.
+
+##
+
+
+## .......... 
+
+#### 209. What is the relationship between a Service and Endpoint?
+
+     Answer: When a client hits a Service, Service needs to know where to send the request to (much like a Load Balancer). It forwards it to an Endpoint.
+             When a Service is created based on a "match" with a pod (or pods), Kubernetes automatically creates an Endpoint to the pod's IP and port.
+             SERVICE ---> ENDPOINT (automaticlaly created) --> POD'S IP and PORT
 
 ##
 
