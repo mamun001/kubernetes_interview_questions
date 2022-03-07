@@ -1,6 +1,6 @@
 
 
-# ................... 211 Kubernetes Interview Questions  ....................
+# ................... 214 Kubernetes Interview Questions  ....................
 
 ## By  Mamun Rashid :: https://www.linkedin.com/in/mamunrashid/ :: Please connect with me.
 
@@ -123,7 +123,7 @@
 ## .
 
 
-## .....
+## .,...
 
 #### 9. How would one start up a Kubernetes cluster to deploy containers/pods on (in GCP)?
 
@@ -135,21 +135,29 @@
        e. Google Deployment Manager
        
 
-## .....
+## .
+
+
+
+## ......
 
 #### 10.   If a container keeps crashing, how do you troubleshoot?
 
     Answer: You can use --previous option with logs command to see the logs of a crashed container.
 
-##
+## .
 
+
+## ......
 
 #### 11.  What happens to containers if they use too much cpu or memory?
 
     Answer: if they use too much memory, they are evicted.
             if they use too much cpu, they are throttled.
 
-##
+## .
+
+
 
 #### 12.  How do you manage scaling in Kubernetes?
 
@@ -1651,7 +1659,23 @@
 ## . 
 
 
+## .......... 
 
+#### 213. (Not really an interview question, more a real life question) . When you are creating a pod using "kubectl run" command, How can you supply a command to run on the container (like sleep 3600)
+
+     Answer:  Simply supply the command with --command -- option.  
+              e.g. kubectl run foo --image=nginx --command -- sh -c "sleep 3600"
+
+## . 
+
+
+## .......... 
+
+#### 214. How can you login into a pod (assuming it only has 1 container) ?
+
+     Answer: kubectl exec foo -it /bin/bash
+
+## . 
 
 
 
