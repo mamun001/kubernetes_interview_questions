@@ -1,10 +1,10 @@
 
 
-# ................... 214 Kubernetes Interview Questions  ....................
+# ................... 226 Kubernetes Interview Questions  ....................
 
 ## By  Mamun Rashid :: https://www.linkedin.com/in/mamunrashid/ :: Please connect with me.
 
-### Last Updated: 2022.03.06
+### Last Updated: 2022.03.07
 
 ##
 
@@ -209,6 +209,8 @@
 ## .
 
 
+## ......
+
 #### 16. You want to know how to make yaml files for making PODs and you have no access to internet. What do you do?
 
     Answer: kubectl explain pod --recursive
@@ -217,34 +219,43 @@
 
       Simillarly: kubectl explain pv --recursive    (for PVs)
 
-##
+## .
+
+## ......
 
 #### 17. How can you have SSL certificates in Kubernetes?
 
     Answer: SSL cert can be a secret. Then that secret can be mounted on a pod and that pod can whatever it wants with it (e.g. host a SSL web site)
 
-##
+## .
 
+
+## ......
 
 #### 18. Opensource Tool to switch contexts easily:
 
     Answer: kubectx
 
-##
+## .
 
+
+## ......
 
 #### 19. Opensource menu-driven text-based flexible Tool to manage Kubernetes everything:
 
     Answer: k9s
 
-##
+## .
 
+
+## ......
 
 #### 20. "kubectl explain" command is great, but you must know the exact name of the resource (e.g. pod/services/persistentvolume) to get the details, unless you do recursive. How do you get the names of these resources from command line?
 
     Answer: kubectl api-resources  (gives you a list and shortnames and more)  
 
-##
+## .
+
 
 #### 21. Name some of the other verbs that kubectl has besides "run" "create" or "apply" ?
 
@@ -1743,7 +1754,83 @@
 ## . 
 
 
+## .......... 
 
+#### 219. In the YAML file for a pod that has more than 1 containers, how do they container specs show up?
+
+       Answer: As a array. Each element of that array is a container specs.
+
+## . 
+
+
+## .......... 
+
+#### 220. In the YAML file , what is always the first line?
+
+       Answer: apiVersion:
+
+## . 
+
+
+
+## .......... 
+
+#### 221. In the YAML file , how do you define what you are building (pod. replicaset, secret, etc.) ?
+
+       Answer: Second Line has kind:    (e.g. kind: pod)
+
+## . 
+
+
+## .......... 
+
+#### 222. How to get logs from a container (not a pod) via command line?
+
+       Answer: (An example):  kubetcl get logs foopod -c foocontainer
+
+## . 
+
+
+## .......... 
+
+#### 223. What does an "operator" pod do?
+
+       Answer: Imagine if you had a set of pods that did MYSQL for you. You would have a leader pod and several read-only pods etc. If a reader pod crashed, a human will have to 
+               go in and restart it. If the leader pod carshed, a human would find a way to get it up and running or promote a read-only pod to a leader pod. In Kubernetes stateful sets, an operator 
+               pod would do all of that automatically.
+
+               Often a vendor sells you a pod-based solution that requires stateful sets, vendor would include such an operator pod so that you (user/client) will not have to worry about the inner 
+               workings on the setup. (I have seen this first hand at companies)
+
+## . 
+
+
+## .......... 
+
+#### 224. What is CRD?
+
+       Answer: Custom Resource Definition. You wanted to create your own type of resource (like pod, rs, depployments etc), you use CRD to define your own resource type.
+               Operators use CRD.
+
+## . 
+
+
+## .......... 
+
+#### 225. Command to get a list of contexts you have defined:
+
+       Answer: kubectl config get-contexts
+
+## . 
+
+
+## .......... 
+
+#### 226. Which file holds your context definitions?
+
+       Answer: ~/.kube/config
+
+## . 
 
 
 
