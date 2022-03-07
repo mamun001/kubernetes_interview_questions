@@ -158,6 +158,7 @@
 ## .
 
 
+## ......
 
 #### 12.  How do you manage scaling in Kubernetes?
 
@@ -170,7 +171,11 @@
       c. Cluster Autoscaler:
            The cluster autoscaler is a Kubernetes tool that increases or decreases the size of a Kubernetes cluster (by adding or removing nodes), based on the presence of pending pods and node utilization metrics
 
-##
+## .
+
+
+
+## ......
 
 #### 13. How have you used RBAC with Kubernetes ?
 
@@ -178,13 +183,19 @@
             By the way, RBAC in Kubernetes is just AWS IAM Policies and Bindings. In RBAC, you have subjects (who gets the permission), verbs (what can the subject actually do), and rolebinding (subject linking to roles) and roles.
 
 
-##
+## .
+
+
+## ......
 
 #### 14. If you have 200 micro-services in your clusters, how do you manage security of each one? How do you avoid toil?
 
     Answer: RBAC is the answer. You define roles. And you place subjects in those roles. Each role then will have access to X Y Z etc. This is really no different than AWS or AD.
 
-##
+## .
+
+
+## ......
 
 #### 15. Tell me about the hardest production Kubernetes issue you solved or faced?
 
@@ -195,7 +206,8 @@
       There are N micro-services. One of them gets a new version. But, the HPA for those pods are set wrong. Container keep crashing. This causes cascading failures for many other micro-services. 
       Solution: Fix the HPA settings and add circuit-breakers in the consuming micro-services.
 
-##
+## .
+
 
 #### 16. You want to know how to make yaml files for making PODs and you have no access to internet. What do you do?
 
@@ -1678,9 +1690,57 @@
 ## . 
 
 
+## .......... 
+
+#### 215. When you create a pod you can give it 3 restart options. What are they?
+
+     Answer: 1. Always
+             2. Never
+             3. OnFailure
+
+## . 
 
 
+## .......... 
 
+#### 216. When you create a pod you can give it 3 restart options. What are the use cases for each?
+
+     Answer: 1. Always (for Deployments or Replicasets)
+             2. Never  (for one time pod runners e.g. via command line)
+             3. OnFailure (for "jobs")
+
+## . 
+
+
+## .......... 
+
+#### 217. If there is a pod already running and you want to restart using a DIFFERENT image, how do you do that using command line?
+
+
+      Answer: kubectl set image command
+
+## . 
+
+
+## .......... 
+
+#### 217. When your run k get pods , how do you sort by name?
+
+      Answer: k get pods --sort-by=.metadata.name 
+              (Credit Bachina Labs)
+
+## . 
+
+
+## .......... 
+
+#### 218. When your run k get pods , how do you sort by creationtime?
+
+      Answer: k get pods --sort-by=.metadata.creationTimestamp
+              (Credit Bachina Labs)
+              (Now you get the idea that you can sort by almost any metadata)
+
+## . 
 
 
 
