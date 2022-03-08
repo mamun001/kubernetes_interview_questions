@@ -1,10 +1,10 @@
 
 
-# ................... 226 Kubernetes Interview Questions  ....................
+# ................... 228 Kubernetes Interview Questions  ....................
 
 ## By  Mamun Rashid :: https://www.linkedin.com/in/mamunrashid/ :: Please connect with me.
 
-### Last Updated: 2022.03.07
+### Last Updated: 2022.03.08
 
 ##
 
@@ -256,6 +256,7 @@
 
 ## .
 
+## ......
 
 #### 21. Name some of the other verbs that kubectl has besides "run" "create" or "apply" ?
 
@@ -269,20 +270,26 @@
 
         Some of more frequently used ones are: logs, get, port-forward and label.
 
-##
+## .
 
+## ......
 
 #### 22. What might you get when you run kubectl api-resources? 
 
     Answer: api-resources is fancy term. Basically you get stuff like pods/secrets/config-maps all that stuff.
 
-##
+## .
+
+## ......
 
 ##### 23. How else can you get help with kubectl? (besides kubectl explain command)
 
     Answer: kubectl --help  is actaully better than kubectl explain in my opinion.
 
-##
+## .
+
+
+## ......
 
 #### 24. You ran "kubectl --help" , but you want a little more help. What to do?
 
@@ -292,7 +299,10 @@
        kubectl top --help 
        kubectl describe --help 
 
-##
+## .
+
+
+## ......
 
 #### 25. Outline the steps to deploy additional scheduler on a Kubernetes cluster (not GKE)
 
@@ -302,7 +312,8 @@
        Create a deploymentment file with type: deployment and component: scheduler (in namespace kube-system)
        Deploy the the scheduler with apply -f scheduler.yaml command
 
-##
+## .
+
 
 #### 26. List out 2 use cases for Daemonsets and explain why it is more appropriate to use daemonset than deployment for those use case:
 
@@ -1829,6 +1840,24 @@
 #### 226. Which file holds your context definitions?
 
        Answer: ~/.kube/config
+
+## . 
+
+
+## .......... 
+
+#### 227. By default, pod A in namesapce A can talk to pod B in Namespace B. True?
+
+       Answer: Yes
+
+## . 
+
+
+## .......... 
+
+#### 228. What is the esiest quickest way to create a service for a running pod?
+
+       Answer: Use the kubetcl expose command
 
 ## . 
 
