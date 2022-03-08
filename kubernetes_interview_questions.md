@@ -1862,4 +1862,38 @@
 ## . 
 
 
+## .......... 
+
+#### 229. What is a Headless service in Kubernetes?
+
+       Answer:  A headless service is a service with a service IP but instead of load-balancing it will return the IPs of our associated Pods.
+                Source: https://dev.to/kaoskater08/building-a-headless-service-in-kubernetes-3bk8
+
+## . 
+
+## .......... 
+
+#### 230. If you are using minikube or kubeadm etc., what is a big limitation in terms or Load Balancing?
+
+       Answer:  There is no integrated load balancers (as you would have in AWS or GCP)
+
+## . 
+
+
+## .......... 
+
+#### 231. When does Kubernetes pull new version of image upon Pod creation ?
+
+        Answer:  if either 
+                 1. Using images tagged :latest
+                 2. imagePullPolicy: Always is specified
+
+        Source: https://stackoverflow.com/questions/33112789/how-do-i-force-kubernetes-to-re-pull-an-image
+
+
+## . 
+
+
+
+
 
