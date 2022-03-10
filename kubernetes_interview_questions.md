@@ -1,10 +1,12 @@
 
 
-# ................... 228 Kubernetes Interview Questions  ....................
+# ................... 231 Kubernetes Interview Questions  ....................
 
 ## By  Mamun Rashid :: https://www.linkedin.com/in/mamunrashid/ :: Please connect with me.
 
-### Last Updated: 2022.03.08
+### Last Updated: 2022.03.10
+### Last Updated: 2022.03.10
+### Last Updated: 2022.03.10
 
 ##
 
@@ -1893,6 +1895,12 @@
 
 ## . 
 
+
+#### 232. What is super quick way to create a service pointing to a running pod?
+
+        Answer:  kubectl expose command
+
+## . 
 
 
 
