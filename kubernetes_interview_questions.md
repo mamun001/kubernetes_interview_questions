@@ -1,12 +1,12 @@
 
 
-# ................... 231 Kubernetes Interview Questions  ....................
+# ................... 233 Kubernetes Interview Questions  ....................
 
 ## By  Mamun Rashid :: https://www.linkedin.com/in/mamunrashid/ :: Please connect with me.
 
-### Last Updated: 2022.03.10
-### Last Updated: 2022.03.10
-### Last Updated: 2022.03.10
+### Last Updated: 2022.03.11
+### Last Updated: 2022.03.11
+### Last Updated: 2022.03.11
 
 ##
 
@@ -317,13 +317,17 @@
 ## .
 
 
+## ......
+
 #### 26. List out 2 use cases for Daemonsets and explain why it is more appropriate to use daemonset than deployment for those use case:
 
      Answer:
        1. Pod that collects logs. Better to use daemonsets for this because you can logs to be fed from all pods (e.g. to kibana). Otherwise you have to make this part of EVERY deployment which would be annoying and repetitive.
        2. Pod that runs monitoring (e.g. dynatrace or datadog). Reason is the same as above.
 
-##
+## .
+
+## ......
 
 #### 27. How to move workload to new nodepool? 
 
@@ -331,13 +335,17 @@
         1. cordon means: dont add any more pods to this nodepool
         2. drain means: move current pods out of it
 
-##  
+## .  
+
+## ......
 
 #### 28. Is ClusterIP private or public?
 
     Ans: Private
 
-##
+## .
+
+## ......
 
 #### 29. Which one will allow to access your services from internet: cluster ip or nodeport? 
 
@@ -345,31 +353,41 @@
              why? Because NODE is a VM with an external IP and thus can be reached.
              Cluster IP is 10.x IP (internal)
 
-##
+## .
+
+## ......
 
 #### 30. For a service, when we use nodeport, EVERY node does what?
 
     Answer: Gives that service an IP and proxy's it. confirmed 
 
-##
+## .
+
+## ......
 
 #### 31. What does it mean when we say that a node proxy's a service?
 
     Answer: The node forwards the traffic to a pod that is part of the service.
 
-##
+## .
+
+## ......
 
 #### 32. 2 ways to let container have access to a secret: 
 
    Answer: Volume and ENV variable
 
-##
+## .
+
+## ......
 
 #### 33. How can a container have access to secret via ENV variable? 
 
     Answer: You can define a ENV in yaml file just like everyhing else and container can just do echo $WHATEVER
 
-##
+## .
+
+## ......
 
 ### 34. One-liner kubectl commad to run a pod with nginx:alpine 
 
@@ -377,38 +395,49 @@
 
              (nginx-pod is arbitrary pod name)
 
-##
+## .
+
+## ......
 
 #### 35. One liner command to  run a pod with a label  
 
     Answer: kubectl run foobar --image=redis:alpine -l label1:foo 
 
-##
+## .
 
+## ......
 ### 36. kubectl command to show labels of all pods in default namespace:  
 
     Answer: kubectl get pods --show-labels 
 
-##
+## .
+
+## ......
 
 #### 37. Whenever you run a kubectl command, it runs in the the default namespace. How do you make in run in a different namespace?
 
     Answer: use -n namespace_name   (to whatever kubectl command you are running.)
 
-##
+## .
+
+## ......
 
 #### 38. Command to create a namespace: 
 
     Answer: kubectl create ns foobar # create a namespace
 
-##
+## .
+
+## ......
 
 #### 39. When using kubectl command, how do you to get output in json format?  
 
     Answer: kubectl get nodes -o json # json format
 
-##
+## .
 
+
+## ......
 
 #### 40. kubectl expose command: port VS targetport:  (which one is which ?)
 
@@ -416,7 +445,7 @@
        port : on the cluster
        targetport: on the container (just like ALB)
 
-##
+## .
 
 #### 41. Command to expose a pod as a service 
 
@@ -1895,6 +1924,7 @@
 
 ## . 
 
+## .......... 
 
 #### 232. What is super quick way to create a service pointing to a running pod?
 
@@ -1902,6 +1932,26 @@
 
 ## . 
 
+
+## .......... 
+
+#### 232. capabilities configuration in XML file, goes where? Pod or Containers?
+
+        Answer:  Conatiners
+
+## . 
+
+
+
+## .......... 
+
+#### 233. Why do we need Ingress when we alrady have "service" that can send traffic to many pods of the same type?
+
+        Answer:  One big reason is this: Without Ingress, you would have to have a Load Balancer for every single web application you are hosting in your cluster.
+                 That can get very expensive and hard to manage.
+                 With Ingress , you can have ONE load balancer that can take in traffic for many web applications and forward them to the right pods.
+
+## . 
 
 
 
