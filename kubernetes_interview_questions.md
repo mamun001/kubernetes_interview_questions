@@ -1989,6 +1989,25 @@
 
 ## . 
 
+## .......... 
+
+#### 238. In the definition of a service what is "port" and what is "Target Port"?
+
+        Answer:  Port : Port on the incoming requests
+                 Target Port: Port on the pod where the trafic ends up 
+                 (Just like a Load Balancer Configuration)
+
+## . 
+
+#### 239. Your pod uses a Config Map. How Can you automatically restart pod if the Config Map changes?
+
+        Answer:  For this, you have to use deployment. In the config of the deployment, use the CM.
+                 When CM changes, and the new CM values breaks things, Deployment is smart enough NOT to scale down.
+                 BUT, if the new CM does NOT break things, deployment will scale down and up with the new value.
+
+## . 
+
+
 
 
 
