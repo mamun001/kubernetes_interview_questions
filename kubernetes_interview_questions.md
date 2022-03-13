@@ -1954,4 +1954,43 @@
 ## . 
 
 
+## .......... 
+
+#### 234. In the kube confi file, what does the URL point to? (for each context)
+
+        Answer:  URL of the API Server (port is almost always :6443)
+
+## . 
+
+
+## .......... 
+
+#### 235. For deployments, the default replica count is ___ ? 
+
+        Answer:  1.   (If you want 1, then you cna leave out that option in an imperative command)
+
+## . 
+
+
+## .......... 
+
+#### 236. How can you update the image of a running deployment using an imperative command ?
+
+        Answer: kubectl set image command
+
+## . 
+
+
+## .......... 
+
+#### 237. What is the default update method for deoloyments ?
+
+        Answer:  Rolling Update
+
+## . 
+
+
+
+
+
 
