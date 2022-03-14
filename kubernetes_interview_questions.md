@@ -1989,6 +1989,7 @@
 
 ## . 
 
+
 ## .......... 
 
 #### 238. In the definition of a service what is "port" and what is "Target Port"?
@@ -1999,6 +2000,9 @@
 
 ## . 
 
+
+## .......... 
+
 #### 239. Your pod uses a Config Map. How Can you automatically restart pod if the Config Map changes?
 
         Answer:  For this, you have to use deployment. In the config of the deployment, use the CM.
@@ -2008,7 +2012,52 @@
 ## . 
 
 
+## .......... 
 
+#### 240. How do you secure kubernetes?
+
+        Answer:  Big Topic, but 7 major parts:
+                 1. Application Security (Ingress, access to pods etc.)
+                 2. Devsecops (CICD Pipeline, who gets to deploy where and under what conditions)
+                 3. User access (RBAC) etc
+                 4. Data Compliance (HIPPA, SOX etc.)
+                 5. Keeping the secrets secure 
+                 6. Patching Nodes (OS Level)
+                 7. Container Image Scanning (automated and regular)
+
+## . 
+
+
+
+## .......... 
+
+#### 241. How to you manage costs on Kubernetes? 
+
+        Answer:  3 parts
+                 1. Control Pane (Not much you can do)
+                 2. Worker Nodes (making sure you are autoscaling)
+                 3. Optimal usage of cpu/memory by pods (use Metrics Server or open source tool kubecost)
+
+## . 
+
+
+## .......... 
+
+#### 242. What is rehrydating? 
+
+        Answer:  (For example , when you are moving to a newer version of Kubernetes), running the same cluster using NEW nodes which is running newer version of Kubernetes and THEN running the pods on the new nodes
+                 (Opposite of draining)
+
+## . 
+
+
+## .......... 
+
+#### 243. Command to drain a node?
+
+        Answer:  kubectl drain ......
+
+## . 
 
 
 
