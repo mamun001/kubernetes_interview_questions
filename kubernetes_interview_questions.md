@@ -1,6 +1,6 @@
 
 
-# ................... 233 Kubernetes Interview Questions  ....................
+# ................... 252 Kubernetes Interview Questions  ....................
 
 ## By  Mamun Rashid :: https://www.linkedin.com/in/mamunrashid/ :: Please connect with me.
 
@@ -2058,6 +2058,110 @@
         Answer:  kubectl drain ......
 
 ## . 
+
+
+## .......... 
+
+#### 244. How did you monitor your Kubernetes Clusters?
+
+        Answer:  Prometheus and Kibana Combinaion is very common (open source)
+                 Other paid options:
+                   Dynatrace & Datadog
+
+## . 
+
+
+## .......... 
+
+#### 245. How do containers on the same pod communicate?
+
+        Answer:  Over localhost!
+
+## . 
+
+
+## .......... 
+
+#### 246. What are 4 components of the Control Pane?
+
+        Answer:  1. API Server
+                 2. Scheduler
+                 3. etcd
+                 4. Controller Manager
+
+## . 
+
+## .......... 
+
+#### 247. What does Controller Manager do?
+
+        Answer:  Runs the un-ending Kubernetes Loop
+
+## . 
+
+
+## .......... 
+
+#### 248. If you create an ingress , how will the traffic be impacted?
+
+        Answer:  Nothing! Until you have a Ingress Controller , an ingress rule does nothing.
+
+## . 
+
+
+## .......... 
+
+#### 249. Does Ingress Controller need to read packets?
+
+        Answer:  Yes, it needs to read the headers
+
+## . 
+
+
+## .......... 
+
+#### 250. How do you create an Ingress Controller? Provide an example.
+
+        Answer:  You can create a deployment using nginx image. That would be one ay of doing it.
+
+## . 
+
+
+## .......... 
+
+#### 251. How do you tell an Ingress to use an Ingress Controller?
+
+        Answer:  In the Spec section, there is a configuration item called "backend". There you can point to a service (e.g. based on nginx deployment)
+
+## . 
+
+
+## .......... 
+
+#### 252. When to use Docker Compose?
+
+        Answer:  When you need to run multiple containers (locally or or on cluster) , and you do not want to keep typing "docker run ....".
+                 By the way, these containers can share a volume.
+
+## . 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
