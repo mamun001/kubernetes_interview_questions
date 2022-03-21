@@ -1,6 +1,6 @@
 
 
-# ................... 255 Kubernetes Interview Questions  ....................
+# ................... 264 Kubernetes Interview Questions  ....................
 
 ## By  Mamun Rashid :: https://www.linkedin.com/in/mamunrashid/ :: Please connect with me.
 
@@ -2197,17 +2197,97 @@
 ## . 
 
 
+## .......... 
+
+#### 256. How can you create an YAML file on the fly without creating a resource ?
+
+        Answer:  Use --dry-run option with -o yaml option (kubectl)
+
+## . 
+
+
+## .......... 
+
+#### 257. How do you deploy 3rd-party applications (built on Kubernetes) to your cluster?
+
+        Answer:  Helm Charts. It has become industry standard for deploying 3rd party applications.  For deploying your own apps to your own Kubernetes Cluster, you may choose something else because Helm is very easy to use. 
+                 Theere is a learning curve.
+
+## . 
 
 
 
+## .......... 
+
+## 258. What if you want to GitOps adn you want you "desired" kubernetes configs in your git repo AND you want to have a pipeline for deploying kubernetes Infrastructure as soon as new Merge happens? How do you do that?
+
+       Answer:  There two tools for doing this: ArgoCD or flux
+
+## . 
+
+
+## .......... 
+
+## 259. Managing certificates for all domains for all the apps that live on your cluster is a pain. How do manage those certs and their expirations?
+
+       Answer: (Example answer:  cert-manager.io)  
+
+## . 
+
+
+## .......... 
+
+## 260. You have Kubernetes ANd other items like databases etc. How do you deploy these as Infrastructure as Code?
+
+       Answer: Best tool for this is Crossplane . 
+
+## .
 
 
 
+## .......... 
+
+## 261. How did you implement Observability into your Kubernetes Cluster(s)?
+
+       Answer: There are many options:
+               1. Prometheus and Grafana
+               2. Datadog
+               3. Dynatrace
+
+## .
 
 
+## .......... 
+
+## 262. How did you collects from your Kubernetes Cluster?
+
+       Answer: Example answer: Promtail
+               Datadog can do it, too.
+
+## .
 
 
+## .......... 
 
+## 263. Where did your ship your logs to?
+
+       Answer: Example answers:
+               Loki
+               Datadog
+
+## .
+
+
+## .......... 
+
+## 264. Tools for Policy Management via Admission Controllers:
+
+
+        Answer:  Kyverno
+                 OPA Gatekeeper
+
+ 
+## .
 
 
 
