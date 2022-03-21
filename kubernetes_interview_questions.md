@@ -2290,6 +2290,26 @@
 ## .
 
 
+## .......... 
+
+## 265. You are setting a new image for deployment imperatively. How can you make sure you can rollback if needed?
+
+
+        Answer:  Use the --record option
+
+ 
+## .
+
+
+## .......... 
+
+## 266. What is THE key difference between deployments and StateFullSets (besides keeping state)?
+
+
+        Answer:  StateFulSets use volumeclaimtemplates. That is the key difference. This way, each pod has acccess to the same data.
+
+ 
+## .
 
 
 
