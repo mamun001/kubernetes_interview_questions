@@ -1,6 +1,6 @@
 
 
-# ................... 252 Kubernetes Interview Questions  ....................
+# ................... 255 Kubernetes Interview Questions  ....................
 
 ## By  Mamun Rashid :: https://www.linkedin.com/in/mamunrashid/ :: Please connect with me.
 
@@ -363,6 +363,7 @@
 
 ## .
 
+
 ## ......
 
 #### 31. What does it mean when we say that a node proxy's a service?
@@ -371,6 +372,7 @@
 
 ## .
 
+
 ## ......
 
 #### 32. 2 ways to let container have access to a secret: 
@@ -378,6 +380,7 @@
    Answer: Volume and ENV variable
 
 ## .
+
 
 ## ......
 
@@ -447,39 +450,57 @@
 
 ## .
 
+
+## ......
+
 #### 41. Command to expose a pod as a service 
 
     Answer: kubectl expose pod foobarpod --name foobarservice --port 6379 --target-port 6379  # expose a pod as a service
             (NOTE servicename is specified: foobarservice)
 
-##
+## .
 
+
+
+## ......
 
 #### 42.  Command to get details of a service : 
 
      Answer: kubectl describe svc foobarservice # get details of that service
 
-##
+## .
 
+
+## ......
 
 #### 43. Command to create a deployment from image: foobar/webapp-color 
 
     Answer: kubectl create deployment foobardeployment --image=foobar/webapp-color 
 
-## 
+## .
+
+
+
+## ......
 
 #### 44. Command to scale deploayment named foobardeployment to 2 replicas  
 
     Answer: kubectl scale deployment foobardeployment --replicas=2 # scale that to 2 replicas  
 
-##
+## .
+
+
+
+## ......
 
 
 #### 45. Can you scale a kubernetes service?
 
     Answer: No. You can scale deployments and replicasets
 
-##
+## .
+
+
 
 #### 46. If you want your kubernetes command to have a scope of ALL namespaces, how do you do that?
 
@@ -2144,6 +2165,41 @@
                  By the way, these containers can share a volume.
 
 ## . 
+
+
+
+## .......... 
+
+#### 253. How does a pod get any permission do anything?
+
+        Answer:  Every pod comes with default service account , which in turns gives the pod a token. Whatever permissions that token has, that is what a pod can do.
+
+## . 
+
+
+
+## .......... 
+
+#### 254. What is the relationship between a Service Account and a Secret?
+
+        Answer:  Every Service Account automatically gets a secret (no different than any other secret). So, when you create a Service Account, if you do "kubectl get secrets", you will see one for that Service Account.
+
+## . 
+
+
+
+## .......... 
+
+#### 255.  When you create Nginx Ingress Controller via YAML file, what would be the "Kind" ?  (e.g. pod, secret, service ....)
+
+        Answer:  LoadBalancer    (You can also run a "Deployment" of those for roubustness"
+
+## . 
+
+
+
+
+
 
 
 
