@@ -51,8 +51,9 @@
 #### 3.  There are more than one way to implement Ingress? What did you use to implement Ingress?
 
     Answer:  So, ingress is IMPLEMENTED by Ingress Controllers. There are at least 12.
-             Most common is a Load Balancer. Another popular one is Nginx Ingress Controller.
-             See below for a longer list.
+             Most common is a Load Balancer (GCP/AWS). 
+             Another popular one is Nginx Ingress Controller.
+             See below for a longer list. (Question #8)
 
 ## .
 
@@ -81,6 +82,8 @@
 #### 5. What is the different between Ingress and Ingress Controller:
 
     Answer: Ingress Controller FULFILLS ingress requirements
+            Defining and ingress has no actual impact on traffic.
+            Traffic is only acted upon once you have created an Ingress Controller (e.g. Load Balancer or Nginx Ingress Controller)
 
 ## .
 
