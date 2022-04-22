@@ -46,6 +46,8 @@
 
 ## .
 
+
+
 ## ......
 
 #### 3.  There are more than one way to implement Ingress? What did you use to implement Ingress?
@@ -56,6 +58,7 @@
              See below for a longer list. (Question #8)
 
 ## .
+
 
 
 ## ......
@@ -277,6 +280,9 @@
 
 ## .
 
+
+
+
 ## ......
 
 #### 22. What might you get when you run kubectl api-resources? 
@@ -285,6 +291,8 @@
 
 ## .
 
+
+
 ## ......
 
 ##### 23. How else can you get help with kubectl? (besides kubectl explain command)
@@ -292,6 +300,8 @@
     Answer: kubectl --help  is actaully better than kubectl explain in my opinion.
 
 ## .
+
+
 
 
 ## ......
@@ -307,6 +317,8 @@
 ## .
 
 
+
+
 ## ......
 
 #### 25. Outline the steps to deploy additional scheduler on a Kubernetes cluster (not GKE)
@@ -320,6 +332,8 @@
 ## .
 
 
+
+
 ## ......
 
 #### 26. List out 2 use cases for Daemonsets and explain why it is more appropriate to use daemonset than deployment for those use case:
@@ -330,6 +344,8 @@
 
 ## .
 
+
+
 ## ......
 
 #### 27. How to move workload to new nodepool? 
@@ -339,6 +355,7 @@
         2. drain means: move current pods out of it
 
 ## .  
+
 
 ## ......
 
@@ -454,6 +471,8 @@
 ## .
 
 
+
+
 ## ......
 
 #### 41. Command to expose a pod as a service 
@@ -472,6 +491,7 @@
      Answer: kubectl describe svc foobarservice # get details of that service
 
 ## .
+
 
 
 ## ......
@@ -504,61 +524,100 @@
 ## .
 
 
+## ......
 
 #### 46. If you want your kubernetes command to have a scope of ALL namespaces, how do you do that?
 
     Answer: add -A to the command
 
-##
+## .
+
+
+
+
+## ......
 
 #### 47. Are environment variables encrypted in Kubernetes? 
 
     Answer: No
  
-##
+## .
+
+
+
+
+## ......
 
 #### 48. By default, can a pod in one namespace talk to another pod in another namespace? 
 
     Answer: Yes.
 
-##
+## .
+
+
+
+## ......
 
 #### 49. How to generate a yaml file from an imperative command you know works ? 
 
     Answer: add: --dry-run=client -o yaml 
 
-##
+## .
+
+
+
+
+## ......
 
 ##### 50. Write a kubectl command to Create a static pod, have it run a command (so it does not exit). dryrun so that you get yaml file saved : 
 
     Answer: kubectl run static-busybox --image=busybox --command sleep 1000 --dry-run=client -o yaml > static-pod-busybox.yaml
 
-##
+## .
+
+
+
+## ......
 
 #### 51. By default, where does yaml files for static POD files go:  
 
     Answer: /etc/kubernetes/manifests/  (on the node)
 
-##
+## .
 
+
+
+
+## ......
 
 #### 52. What is a static pod?
 
     Answer: This is from official documentation.  Static Pods are managed directly by the kubelet daemon on a specific node, without the API server observing them.
 
-##
+## .
+
+
+## ......
 
 #### 53. Kubectl command to take all the details for a.yaml file and create the resource it tells API to crate: 
 
     Answer: kubectl apply -f a.yaml  
 
-##
+## .
+
+
+
+## ......
 
 #### 54. Kubectl command to list all the pods in foo namespace: 
 
     Answer: kubectl get pods -n foo
 
-##
+## .
+
+
+
+## ......
 
 #### 55. There is pod named foo. it is in crashloopbackoff state. How to find the cause using a kubectl command? 
 
@@ -568,7 +627,11 @@
 
     What you might see is for example, container's "command" has a mispelling in it. (Just an example)
 
-##
+## .
+
+
+
+## ......
 
 #### 56. Scenario Question: You have a container that keeps crashing because its "command" section has a misspelling. How do you fix this?
 
@@ -578,74 +641,119 @@
       3. kill the pod, 
       4. re-run with the correct yaml file (kubectl apply -f)
 
-##
+## .
+
+
+
+## .......
 
 #### 57. How to get a yaml file out of running/crashing pod? 
 
     Answer: kubectl get pod foo -o yaml > foo.yaml 
 
-##
+## .
+
+
+
+## .......
 
 #### 58. How to terminate a running pod? 
 
     Answer: kubectl delete pod foo
 
-##
+## .
+
+
+
+## ......
 
 #### 59. Command to see a list of running pods in the default namespace: 
 
     Answer: kubectl get pods 
 
-##
+## .
+
+
+
+## ......
 
 #### 60. Kubectl command to make a new yaml file for a service by exposing a already running deployment that runs a pod.  Name of the deployment: foo.
 
     Answer: Kubectl expose deployment foo --name foo-service --type=NodePort --port 8080 --target-port=8080 --dry-run=client -o yaml > svc.yaml
 
-##
+## .
 
-#### 61. jsonpath example of getting "everything"  (about nodes)  
+
+
+## ......
+
+#### 61. jsonpath example of getting "everything"  (about nodes)  .  This is not really an interview question. But, its goog to know this in case JSON PATH topic comes up.
 
     Answer: kubetcl get nodes -o jsonpath='{.items[*]}'   # everything, so tons of data
             * Thing to remember is syntax starts out like awk (single quote and swiggly bracket and then follows dots for JSON levels and [] for lists.
 
-##
+## .
+
+
+
+## ......
 
 #### 62. jsonpath example of getting just the level "status" for all nodes 
 
     Answer: kubectl get nodes -o jsonpath='{.items[*].status}'   # quite a bit of data comes back
 
-##
+## .
 
-#### 63. jsonpath comamnd to get only status.nodeInfo of each node  
+
+
+## ......
+
+#### 63. jsonpath comamnd to get only status.nodeInfo of each node . This is not really an interview question. But, its goog to know this in case JSON PATH topic comes up.
 
     Answer: kubectl get nodes -o jsonpath='{.items[*].status.nodeInfo}'   # better, more managable amount of data
 
-##
+## .
+
+
+
+## .......
 
 #### 64:  Your computer has no access to internet. Which kubectl command  can you use to find out syntax of making a pv.yaml : 
 
      Answer: kubectl explain pv --recursive  # to find out syntax of making a pv.yaml
 
-##
+## .
+
+
+## ......
 
 #### 65. What is the different between PV and PVC?
 
     Answer: PV is basically a disk volume of some sort.  PVC is a link between that volume and a pod.
 
-##
+## .
+
+
+
+## ......
 
 #### 66. Kubectl command to get a list of PVs
 
     Answer: kubectl get pv   
 
-##
+## .
+
+
+## ......
 
 #### 67. Kubectl command to get detail about a PV   
 
     Answer: kubectl describe pv foo  
 
-##
+## .
+
+
+## .......
 
 #### 68. How does the Master server talk to etcd ?
 
@@ -654,7 +762,11 @@
              On the master node, the file that has these configs is at : /etc/kubernetes/manifests/etcd.yaml
              That file in turn , points to the 2 cert files and 1 key file.
 
-##
+## .
+
+
+
+## .......
 
 #### 69. Some example of commands the master server can send to etcd (once authenticated with certs and key):
 
@@ -663,7 +775,10 @@
        snapshot save /tmp/etcd-backup.db
        snapshot status /tmp/etcd-backup.db -w table
 
-##
+## .
+
+
+## .......
 
 #### 70. Steps to create a pod called foo with image redis with CPU Request set to 2 CPU and Request as 400MiB
 
@@ -677,7 +792,10 @@
             memory: 400MiB
          c. kubectl apply -f ./foo.yaml
 
-##
+## .
+
+
+
 
 #### 71. True or False: POD DEFINITION (yaml) ONLY points to PVC (claim), it does not refer to the PV anywhere. 
 
@@ -719,10 +837,11 @@
 
 ##
 
-#### 77. Why are .csr files have CSR extension?
+#### 77. Why are .csr files have CSR extension? What is CSR all about?
 
      Answer: CSR = Certificate Signing Request.  
-             For example A needs B to give A a signed certificate SO THAT A can later talk to B using that certificate. A will send a CSR (Certificate Signing Request) to B. The file that A sends to be will be CSR and thus will have .csr extension.
+             For example A needs B to give A a signed certificate SO THAT A can later talk to B using that certificate. 
+             A will send a CSR (Certificate Signing Request) to B. The file that A sends to be will be CSR and thus will have .csr extension.
 
              Please read:  https://kubernetes.io/docs/reference/access-authn-authz/certificate-signing-requests/
 
@@ -1271,6 +1390,7 @@
 ##
 
 #### 154. Pods can have startup and runtime errors - Explain what some of these errors mean and 2-3 common culprits  (These wil come in handy for various interview questions)
+          Imagine the interviewer asking you about each specific one and you having explain that one.
 
 
      Answer:
@@ -1278,18 +1398,22 @@
        : the docker image could not be gotten
 	       Registry name is bad or not reachable
 	       Docker image name is bad or image no longer exists
+
        CrashLoopBackOff
        : container comes up and crashes/exists
 	       Container has nothing to do, so it shuts down
 	       Initial value of readiness probe is too small compared to what is needed by container¿s tasks
+
        RunContainerError
        : container could not be kicked off
 	       Pod network solution is not working
 	       Authorization Issues
+
        Pods in Pending State
        : waiting for scheduling for one reason or another
 	       Not enough resources on node(s)
 	       Worker node cannot reach master node
+       
        Pods in a not Ready State
        : pod has been scheduled, but it has not finished coming up for one reason or another
 	       There is a readiness probe that's failing
