@@ -1416,13 +1416,18 @@
 ## .
 
 
+## ......
 
 #### 131. You suspect something is wrong with the control plane pods. What should your run?
 
      Answer: kubectl -n kube-system get pods  
        (to see if any the pods in that namespace is having problems)
 
-##
+## .
+
+
+
+## .......
 
 #### 132. You see that a pod is in "imagepullbackoff" state (ie not running),
      what should you look at?
@@ -1431,7 +1436,11 @@
              "imagepullbackoff" means that, for some reason, Kubernetes could not pull the docker image.
              This could be because image is not there OR there are permission issues prohibiting the download of that image.
 
-##
+## .
+
+
+
+## .......
 
 #### 133. Scenario Question: You issued the command to scale up a deployment to 3 replicas. it is stuck at 3 desired and 1 running.
      You found out that the controller-manager pod on the master had issues. You fixed that so, controller-manager pod
@@ -1439,13 +1448,19 @@
 
      Answer: Nothing! controller-manager starts and does its job
 
-##
+## .
+
+
+## ......
 
 #### 134. How do you list out all pods running in the namespace foo?
 
      Answer: kubectl get pods -namespace=foo
 
-##
+## .
+
+
+## ........
 
 #### 135. What does imperative vs declarative provisioning means in provisioning resources for Kubernetes?
 
@@ -1453,13 +1468,19 @@
        Imperative: Basically via commands
        Declarative: basically via yaml files
 
-##
+## .
+
+
+## .......
 
 #### 136. Assume that you are connected to the cluster and context, how do you quickly create an NGINX pod using an imperative approach?
 
      Answer: kubectl run nginx --image=nginx
 
-##
+## .
+
+
+## ........
 
 #### 137.  Describe what is namespace in Kubernetes and why is it used?
 
@@ -1467,15 +1488,22 @@
        It's like an isolation process. e.g. If you namespaces dev and prod, you can have pods named foo in both namespaces and there is no conflict. (In the same cluster)
        In Kubernetes, you can have the dev team their own namespace and prod can have its own namespace.
 
-##
+## .
 
-#### 138. You deploy an application to a GKE cluster by applying kubectl -f deployment.yaml.  After deployment you check the pods status and see that the pods are in CrashLoopBack mode.  Outline the steps that you use to troubleshoot and the kubectl command you use to diagnose the problem.
+
+## ........
+
+#### 138. You deploy an application to a GKE cluster by applying kubectl -f deployment.yaml.  After deployment you check the pods status and see that the pods are in CrashLoopBack mode.  
+          Outline the steps that you use to troubleshoot and the kubectl command you use to diagnose the problem.
 
      Answer:
        Step 1: run the describe pod command and read through events
        Step 2: run the kubectl logs -p podname and see what is going on with pods (use --previous option, since pod has already crashed)
 
-##
+## .
+
+
+## ......
 
 #### 139. What are the functions of Kubernetes control plane?  Where do those functions reside?
 
@@ -1488,25 +1516,38 @@
 
       Answer: Docker (runtime engine) + kubelet + kube-proxy
 
-##
+## .
+
+
+## .......
 
 #### 141. Which component of Kubernetes is responsible for tainting and placement of pods on the nodes.
 
      Answer: scheduler
 
-##
+## .
+
+
+
+## .......
 
 #### 142. When a new GKE cluster is created,  what are the main namespaces created?
 
      Answer: Default and kube-system
 
-##
+## .
+
+
+## ........
 
 #### 143. What do you use labels and selectors for in Kubernets?
 
       Answer: So that you can select something based on those labels. They are like tags in AWS. Let's say I want to use node-affinity. We can use labels to select (selector argument in yaml or command) the ones desired.
 
-##
+## .
+
+
+## .......
 
 #### 144. Examples of  slapping labels on pods
 
@@ -1514,7 +1555,10 @@
       kubetcl  label pods pod1 owner=mamun
       kubectl  label pods pod2 owner=foo
 
-##
+## .
+
+
+## .......
 
 #### 145. Examples of using selectors to get pods:
 
@@ -1522,14 +1566,21 @@
       kubetcl get pods --selector owner=mamun
       kubectl get get pods -l owner=foo
 
-##
+## .
+
+
+
+## ........
 
 #### 146. What are annotations use for in Kubernetes and how are they different from labels and selectors  
 
      Answer:  Non-identifying metadata (e.g. contact info). Almost like comments
               You can't select based on annotations. You can select based on labels.
 
-##
+## .
+
+
+## .......
 
 #### 147. Is deployment and service the same - Explain the difference or the sameness between the 2 concepts
 
@@ -1538,32 +1589,49 @@
          Deployment is like terraform apply (of pods) that you can run a bunch of time with changing configurations (Kubernetes keeps track and so you can roll back).
          Service is basically an entrypoint for users to hit the pods with the right application. Users only know about service and not the pods behind it.
 
-##
+## .
+
+
+## ........
 
 #### 148. How do pods and service relate to each other.  
 
      Answer: Service = pods + some ip and ports (there are 3 different kinds, nodeport, clusterip and LB)
              Another way to look at it: service is a persistent front-door to 1 or more pods that can come and go.
 
-##
+## .
+
+
+
+## .........
 
 #### 149.  What are the 3 main characteristics you should focus on to troubleshoot what can go wrong between pods and services?
 
       Answer: Target port (port on containers), labels and selectors
 
-##
+## .
+
+
+
+## .........
 
 #### 150. What are the mechanisms to expose an application running in Kubernetes to the outside world?
 
      Answer: pods ---> service ---> Public IP ---> DNS ---> External Users
 
-##
+## .
+
+
+## .........
 
 #### 151. How do you check to see if the deployments are ready?
 
      Answer: kubectl get deployments
 
-##
+## .
+
+
+## ..........
 
 #### 152. List some useful commands to troubleshoot Pods issues:  (These will come in handy on various interview questions)
 
@@ -1576,14 +1644,21 @@
        Kubectl exec -ti podname bash
 
 
-##
+## .
+
+
+## .......
 
 #### 153. What is port-forwarding?
 
      Answer: You make a link between a port on your Mac or PC (localhost) and a port on a pod.
              For example, pod is open on port 443. If you set up port-forward to you localhost port 4430, you can get to the web server on pod via https://localhost:4430
 
-##
+## .
+
+
+
+## ........
 
 #### 154. Pods can have startup and runtime errors - Explain what some of these errors mean and 2-3 common culprits  (These wil come in handy for various interview questions)
           Imagine the interviewer asking you about each specific one and you having explain that one.
@@ -1614,13 +1689,20 @@
        : pod has been scheduled, but it has not finished coming up for one reason or another
 	       There is a readiness probe that's failing
 
-##
+## .
+
+
+## ........
 
 #### 155.  Can you schedule regular pods on the master node (general Kubernetes, not GKE).  
 
       Answer: Yes. BUT, the noschedule taint (which is there by default) has to be removed first.
 
-##
+## .
+
+
+
+## .........
 
 #### 156. You have a node A with taint=blue.  You have a Pod X with toleration for taint=blue.  Would pod X always be placed on Node A. Explain your answer in detail (Why yes or no)
 
@@ -1628,7 +1710,10 @@
        Taint is a barrier. The fact that pod X has toleration for blue means that it CAN be scheduled on node A. 
        However, if there are other nodes with no taint or taint of blue, X can land there too.
 
-##
+## .
+
+
+## ...........
 
 
 #### 157. What is the use case for node affinity vs nodeSelector?
@@ -1638,39 +1723,58 @@
        nodeSelector use cases: pods belonging to a team go on the same node(s). Pods belonging to an environment (e.g. dev) go on the same node(s).
        node affinity use cases: geographic location. Pods go on nodes where some pods live (OR do not live)
 
-##
+## .
+
+
+## ........
 
 #### 158.  How do you find out what image of the running container (in a pod)?
 
       Answer: kubectl describe pod podname | grep -i image
 
-##
+## .
+
+
+## .......
 
 #### 159.  Command used to find out what node the pods are running on:
 
       Answer: kubectl get pods -o wide
 
-##
+## .
+
+
+
+## ........
 
 #### 160. What does the READY column in the output column of the "kubectl get pods" command indicate?
 
      Answer: How many containers are supposed to run in the pod and how many are actually running.
 
-##
+## .
+
+
+## ........
 
 #### 161.  What happens if all master nodes are unavailable on (GKE) ? would that impact workloads running on the worker nodes?
 
       Answer:  Workloads will keep running. However, no new deployments can be pushed. No fault tolerance using replicasets 
                (scheduler is down) will happen. This is the same as Hadoop.
 
-##
+## .
+
+
+## ......
 
 #### 162.  Why are worker nodes spread out on multiple availability zones in GKE?
 
       Answer:
         If Google Cloud has an outage in one AZ, application will still be available.
 
-##
+## .
+
+
+## .......
 
 #### 163. What is the difference between setting up a GKE cluster as regional versus zonal.  This will require you read up on GKE implementation of K8s
 
@@ -1679,14 +1783,20 @@
        Regional cluster: masters are present in N zones + nodes are in N zone
        So, In Regional cluster, master is HA at the regional level, whereas in Multi-zonal cluster, it is not.
 
-##
+## .
+
+
+## ......
 
 #### 164. What is the difference between a daemonset and a deployment?
 
      Answer: Sometimes there is a need to have some pods on EVERY node (e.g. DNS server or a log collector). One can deploy these ¿sets¿ as a daemon set on each node.
              Deployment is a declarative definition of replicasets/pods. You define what needs to go on (how many, what type etc) and the deployment controller ensures that the "desired state" is always there.
 
-##
+## .
+
+
+## ........
 
 #### 165. What is the default deployment strategy of a Kubernetes deployment?
 
@@ -1696,7 +1806,10 @@
                Canary deployment
                A/B testing
 
-##
+## .
+
+
+## .......
 
 #### 166. In a replica set definition how do we tell the replica set that a set of pods is part of the replica set?
 
@@ -1706,25 +1819,39 @@
          replicas: 3
          selector:
 	       matchLabels
-##
+## .
+
+
+## .......
 
 #### 167. How to add a node pool?  (in GCP)
 
     Answer: gcloud container node-pools create $NAME --cluster $CLUSTER --region $REGION
 
-##
+## .
+
+
+## .......
 
 #### 168. What namespace does kube-scheduler reside in?
 
     Answer: kube-system
 
-##
+## .
+
+
+
+## ........
 
 #### 169. Does "kubectl pods -help"   work? 
 
     Answer: no, because kubectl does not recognize "pods" as valid 2nd level command
 
-##
+## .
+
+
+
+## .......
 
 #### 170. What are the benefits of the resource limits in Kubernetes ?
 
@@ -1733,13 +1860,19 @@
     Runaway containers do no affect others
     We get alerted when resource increase over time does not reach a certain limit.
 
-##
+## .
+
+
+## ........
 
 #### 171.  True/False:  Resource limits are set on per-pods basis in Kubernetes
 
       Answer:  False. They are set at container level.
 
-##
+## .
+
+
+## .......
 
 #### 172. Explain what is meant by resource request and resource limits setting.
 
@@ -1747,14 +1880,21 @@
        Request: amount of resources a container asks for and scheduler only schedules IF that amount IS available on a node. ("entrypoint")
        Limit: container is killed or throttled IF a container ever tries to get this much resource.("bad boy level")
 
-##
+## .
+
+
+## ........
 
 #### 173. How to filter "kubectl get pods" output by label?
 
      Answer:  kubectl get pods -l env=dev
          (to filter by label env matching "dev")
 
-##
+## .
+
+
+
+## .......
 
 #### 174. How to "deploy" 3 exact same pods (via YAML file)  
 
@@ -1762,177 +1902,233 @@
              spec:
                replicas: 3
 
-##
+## .
+
+
+## ........
 
 #### 175. True/False: A POD is not a scalable unit (imperatively). A Deployment that schedules PODs is.
 
      Answer: True 
 
-##
+## .
+
+
+## .......
 
 #### 176. Why would you have many Deployments work together in the virtual network of the cluster?
 
      Answer: There are many use cases for this. One example would be to deploy many micro-services. Each micro-service would be a deployment. 
 
-##
+## .
+
+
+## ......
 
 #### 177. To expose a pod so that users can get to it, you need to create ________ ?
 
      Answer: Service
 
-##
+## .
+
+
+
+## .......
 
 #### 178. You can think of Ingress as ________
 
      Answer: Layer 7 LB  (or AWS API Gateway)
 
-##
+## .
+
+
+## .......
 
 #### 179. Deployments are meant to contain stateless services. If you need to store a state you need to create ________ instead (e.g. for a database service).
 
      Answer: StatefulSet
 
-##
+## .
+
+
+## .......
 
 #### 180.  How do you see which pods or nodes are using the most resources?
 
     Answer: kubectl top pod   OR
             kubectl top nodes
 
-##
+## .
+
+
+## .......
 
 #### 181.  Can a POD span more than 1 "node" ?
 
       Answer: No
 
-##
+## .
+
+
+## .......
 
 #### 182. Does a Pod always get an IP?
 
      Answer: Yes
 
-##
+## .
+
+
+
+## .......
 
 #### 183. Let's say that you want to add a "sleep" command to your container. Where does that go in the YAML file?
 
      Answer: in spec section:  command: ['sleep']
 
-##
+## .
+
+
+## ........
 
 #### 184. What is the format for ConfigMap?
 
      Answer: key-value pair (just like almost anything else :-) )
 
-##
+## .
+
+
+## ........
 
 #### 185. Can you edit any live object using "kubectl edit" command?
 
      Answer: No
 
-##
+## .
+
+
+
+## ........
 
 #### 186. Command to edit the configuration of a live pod:
 
      Answer: kubectl edit pod foo
-##
+## .
+
+
+## ........
 
 #### 187. Command to delete a running pod:
 
      Answer: kubectl delete foo
 
-##
+## .
+
+
+## ......
 
 #### 188. What dictates how much resources does a container get?
 
      Answer: request and limit parameters
 
-##
+## .
+ 
+
+
+## .......
 
 #### 189. Pods come and go. So, how in the world, does Kubernetes provide any real service?
 
      Answer: Service's IP NEVER changes. You can point DNS to it. Behind the "service" are the ephemeral pods.
 
-##
+## .
+
+
+
+## ........
 
 #### 190. (Real Interview Question asked 2022): You run "k get po" and you ass a pod that is in "completed" state. What does that mean?
 
      Answer: This means that pod came up, did its job and finished. It did not crash. It is not running. You can still get to its logs
 
 
-##  
+## .  
+
+
+## .......
 
 #### 191. (Real Interview Question asked 2022): What kind of troubleshooting have you done in Kubernetes?
 
      Answer: This depends on your experience, but some ideas include ingress, capacity, pods crashing, slow service, certificate expiring etc.
 
-##  
+## .  
 
 
 
-##  
+## ........ 
 
 #### 192. (Real Interview Question asked 2022): How is Anthos Service Mesh compared to Istio?
 
      Answer: Anthos Service Mesh is managed service. It is cheap ($50 a month for 100 endpoints per cluster as of Jan 2022). It comes with dashboards automatically. So, definitely a good choice. Also, no more hassles of upgrading Istio.
 
-##  
+## .  
 
 
-##  
+## .........  
 
 #### 193. Who manages virtual IPs of services?
 
      Answer: kube-proxy
 
-##   
+## .   
 
 
-##  
+## .........  
 
 #### 194. What component of Kubernetes is basically a crude Load Balancer?
 
      Answer: service
 
-##   
+## .   
 
 
-##  
+## ..........  
 
 #### 195. in GKE, how is Ingress implemented by default?
 
      Answer:  a Load Balancer behind the scene
 
-##   
+## .   
 
 
-##  
+## ........  
 
 #### 196. Ingress works at which OSI layer?
 
      Answer:  Layer 7 (HTTP or HTTPS)
 
-##   
+## .   
 
 
-##  
+##  ........... 
 
 #### 197. Validating YAML file is a pain? How do you do that?
 
      Answer:  Open Source Tools like Terrasan or Kubeval work great.
 
-##   
+## .   
 
 
-##  
+## ..........  
 
 #### 198. Where does kube-proxy run?
 
      Answer:  On each node. You can think of this as any other network proxy (e.g. HAProxy or Nginx or Squid) running on each node managing traffic in and out of nodes.
 
-##   
+## .  
 
 
-##  
+##  ......... 
 
 #### 199. Why are there 3 versions of NGINX ingress controller for Kubernetes?
 
@@ -1941,17 +2137,17 @@
               3. One made by Nginx (NOT Free)
 
 
-##   
+## .   
 
 
-##  
+## .......  
 
 #### 200. Why would you go with Nginx Ingress Controller (and not the Kubernetes Community One)
 
      Answer:  With Nginx one, you get HTTP Load Balancing (You don't get with community one)
      Source: https://www.youtube.com/watch?v=OM_N0jjghqI
 
-##
+## .
 
 
 ## ............  
