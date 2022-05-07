@@ -2905,27 +2905,6 @@
 ## .
 
 
-## ......
-
-#### 274.  How to set up authentication for Kubernetes?
-
-     Answer: Just use GCP IAM
-
-## .
-
-
-## ......
-
-#### 275. How to rotate your cluster credentials using gcloud CLI?
-
-     Answer:  gcloud containers cluster foo update ¿start-credentials-rotation
-
-## .
-
-
-
-
-
 
 
 
