@@ -5,7 +5,7 @@
 ##
 ##      https://www.linkedin.com/in/mamunrashid/   
 ##
-####        Please connect with me on Linkedin
+####        Please follow me OR  connect with me on Linkedin
 ##
-####   1. Kubernetes (181)
+####    Numbers of questions: 284 (as of 2022.05.07)
 ####   
