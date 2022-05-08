@@ -2156,7 +2156,7 @@
 
      Answer: Because otherwise, you will have re-write each application "data" to the format that Prometheus expects. The prometheus sidecar will do that and send the data along w/o you having to modify the application container.
 
-## .
+##
 
 
 ## ............
@@ -2165,7 +2165,7 @@
 
      Answer:  Main agent on the worker nodes 
 
-## .
+##
 
 
 
@@ -2176,7 +2176,7 @@
      Answer:  Docker Compose: Simple way to run multi-container Docker Applications (defined in YAML file)
               Kubernetes: It is a full-fledge Orchestration Tool
 
-## .
+##
 
 
 
@@ -2186,7 +2186,7 @@
 
      Answer:  To deploy Kubernetes on existing VMs kind of by hand (running commands for master node and worker nodes)
 
-## .
+##
 
 
 
@@ -2196,8 +2196,7 @@
 
      Answer:  It gives it to the kubelet on one worker node
 
-## .
-
+##
 
 ## .......... 
 
@@ -2205,7 +2204,7 @@
 
      Answer:  You use -o=jsonpath="......blah...." to basically query the output that you get from kubectl to get precisely what you need.
 
-## .
+##
 
 ## .......... 
 
@@ -2213,7 +2212,7 @@
 
      Answer: Simply use "deployments"  (Not statefulset  or replicasets)
 
-## .
+##
 
 
 ## .......... 
@@ -2244,7 +2243,7 @@
               1. Using a curl command and pointing to 10250 port of a worker node OR
               2. Opensource tool called kubeletctl
 
-## . 
+## 
 
 
 ## .......... 
@@ -2970,53 +2969,6 @@
 #### 280. Inside a worker node who keeps the desired state? 
 
      Answer: kubelet
-
-## .
-
-
-
-## ......
-
-#### 281. kublet receives it¿s work in the form of _______  ?
-
-     Answer: YAML
-
-## .
-
-
-
-## ......
-
-### 282. Kube Proxy runs on each worker node. For all practical purposes, what is it, really?
-
-    Answer: It is basiclaly a Load Balancer
-
-
-## .
-
-
-
-## ......
-
-#### 283. How can ONE service expose MULTIPLE deployments ?
-
-     Answer: It can do that based on tags?
-
-## .
-
-
-## .......
-
-### 284.  What does a adapter sidecar do basically ?
-
-    Answer:  Adapter sidecar changes format of output
-
-## .
-
-
-## ......
-
-#### 285
 
 
 
