@@ -80,7 +80,7 @@
 
 ## .....
 
-#### 5. What is the different between Ingress and Ingress Controller:
+#### 5. What is the difference between Ingress and Ingress Controller:
 
     Answer: Ingress Controller FULFILLS ingress requirements
             Defining and ingress has no actual impact on traffic.
@@ -3014,7 +3014,6 @@
 
 ## ......
 
-#### 285
 
 
 
