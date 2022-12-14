@@ -1,10 +1,10 @@
 
 
-# ................... 284 Kubernetes Interview Questions  ....................
+# ................... 287 Kubernetes Interview Questions  ....................
 
 ## By  Mamun Rashid :: https://www.linkedin.com/in/mamunrashid/ 
 
-### Last Updated: 2022.11.16
+### Last Updated: 2022.12.13
 
 ##
 
@@ -3004,6 +3004,8 @@
 ## .
 
 
+
+
 ## .......
 
 ### 284.  What does a adapter sidecar do basically ?
@@ -3013,11 +3015,34 @@
 ## .
 
 
+
 ## ......
 
+### 285.  What are nginx ingress controllers , basically? 
+
+    Answer:  Just a "deployment" of modified version of nginx conatiners.
+             e.g. https://github.com/kubernetes/ingress-nginx/blob/main/docs/examples/static-ip/nginx-ingress-controller.yaml
+
+## .
 
 
 
+## ......
+
+### 286. How can you have a VM (kubernetes node ) that is small in size and does not any extra packages (e.g. 100s of MBs instead of Gig+)?
+
+    Answer: You can convert a Docker container image (e.g. Ubuntu) and add 2 packages (one of them is a File System package)
+
+## .
+
+
+## ......
+
+### 287. How can you convert a Docker image to a VM
+
+    Answer: ?????
+
+## .
 
 
 
