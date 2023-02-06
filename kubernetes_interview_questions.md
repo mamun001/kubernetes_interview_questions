@@ -1,10 +1,10 @@
 
 
-# ................... 287 Kubernetes Interview Questions  ....................
+# ................... 288 Kubernetes Interview Questions  ....................
 
 ## By  Mamun Rashid :: https://www.linkedin.com/in/mamunrashid/ 
 
-### Last Updated: 2022.12.13
+### Last Updated: 2023.02.05
 
 ##
 
@@ -3060,6 +3060,15 @@
     remains in a terminating state while the control plane, or other components, take the actions defined by the finalizers. 
     After these actions are complete, the controller removes the relevant finalizers from the target object. When the 
     metadata.finalizers field is empty, Kubernetes considers the deletion complete and deletes the object.
+
+## .
+
+
+### 289. If a client sends a request API server, which component intercepts that request to make sure that the request should be acted upon?
+
+    Answer: Admission Controllers. There can be many. Be default, a few of them are already enabled.
+            You can your own.
+            Admission controllers act AFTER authentication has happened and authorization has been finalized.
 
 ## .
 
