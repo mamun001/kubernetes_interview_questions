@@ -3088,7 +3088,74 @@
 
 
 
+## ......
 
+### 291. In order to follow DRY principle, your code should work across all enviroments (dev, staging , prod). How can you do this when you know things will be different across various environments?
+
+    Answer: configmaps! (Code remains same , only the values of config-maps differ)
+
+## .
+
+
+
+## ......
+
+### 292. Why do we need PV and PVC? Why not just PV or just PVC?
+
+    Answer: de-coupling. This way, you can define your PVs not knowing when they will be used. Similarly, you can create PVC knowking PV already exists.
+
+## .
+
+
+## ......
+
+### 293. Why do we need storageclass?
+
+    Answer: Again, de-coupling. You can define many kinds of storage (fast, slow, EBS, GCS, NFS, on and on). You can just use them as you see fit.
+
+## .
+
+
+## ......
+
+### 294. Explain how a container mounts a volume.
+
+    Answer: Actually containers depends on the pods to "define" the volume and give it a name. Container then uses that "name" and mounts it on whichever directory it wants to. This way, two conatiners on the SAME pod can mount the same volume on two different mounting locations.
+
+## .
+
+
+
+
+why do we need labels
+apply failed with errors like "expecting X got Y"
+why do we need node pools?
+what is the connection between values.yaml (Helm) and configmaps
+How do you service discovery in k8s:
+  1. via DNS
+  2. via ENV variable (SQL_SERVER=1.2.3.4) injecte don to container
+Why do you need a "job" in k8s?
+Why do you need a  "cronjob" in k8s?
+Where did your have yours hands-on experience on k8s?
+How did you manage logging persistence? Prometheus? Datadog? Agents?
+You just created a cluster. How do you know what;s running there by default
+Wlak me through the steps of how you store password in k8s? (e.g. DB password)
+   base64, secret, "data" section, key-value pair, mount it on a pod/container
+All I am giving you a docker image (that runs a web server). You don't even have a cluster. Walk me through how you take this service live. Assume that you don't scaling or HA
+Network policy vs ingress
+You have created a PV using hostpath. How do you know if all is well. ans: describe and status should say "available"
+Can you use 2 PVCs with 1 PV? no! 1:1
+3 recycle policies for PV: retain, recycle, delete
+If retain , then: pvs goes away, PV will still just sitv there
+Can multiple pods use the same PVC? yes
+Tell me when you will use a label selector
+You have 5 departments on 1 cluster. Each has their own namespace. How can you keep dept1 from using up all the resources? use quota. quota is applied at namespace level.
+Once you have MYSQL pods running, how can you make a service out of them?
+   port 3306
+   targetport 3306
+   use label selector to select pods for backend
+You have 20 nodes. You want to use 10 of then ONLY for production pods. How? taint the nodes
+Pods in pending state. why? nodes tainted or not enough resources left or node affinity set wrong
 
 
 
