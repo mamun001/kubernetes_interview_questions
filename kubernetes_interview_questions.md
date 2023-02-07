@@ -3064,6 +3064,9 @@
 ## .
 
 
+
+## ......
+
 ### 289. If a client sends a request API server, which component intercepts that request to make sure that the request should be acted upon?
 
     Answer: Admission Controllers. There can be many. Be default, a few of them are already enabled.
@@ -3072,6 +3075,16 @@
 
 ## .
 
+
+
+
+## ......
+
+### 290. If you have a YAML file that has codes for 10 different resources (pods, deployments etc). How can delete all resources made from this YAML file?
+
+    Answer: kubectl apply -f filename.yaml
+
+## .
 
 
 
