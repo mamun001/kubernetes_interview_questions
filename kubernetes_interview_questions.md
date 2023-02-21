@@ -809,7 +809,7 @@
 
 #### 72. Kubectl command to create deployment with busybox version 1.13  
      
-     Answer: kubectl run foo-deploy --image=busybox:1:13 --replica=1 --record  # create deployment w busybox 1.13
+     Answer: kubectl create deployment foo-deploy --image=busybox:1:13 --replica=1 --record  # create deployment w busybox 1.13
 
 ## .
 
