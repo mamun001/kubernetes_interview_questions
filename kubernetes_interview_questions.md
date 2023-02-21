@@ -755,7 +755,7 @@
 
 ## .......
 
-#### 68. How does the Master server talk to etcd ?
+#### 68. How does the Master server authenticate itself to etcd ?
 
      Answer: It makes a call etcd (runs on localhost in most cases). To do that, it authorizes itself with etcd using 2 certs and 1 key.
                AND sends commands to etcd.
