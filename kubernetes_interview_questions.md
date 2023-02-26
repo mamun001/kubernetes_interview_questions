@@ -3190,7 +3190,16 @@
 
 ### 301.  Why do you need a "job" in Kubernetes?
 
-    Answer: Sometimes there is a need for pod to be create for the sol reason of doing a task ONLY once. "job" is how you define that.
+    Answer: Sometimes there is a need for pod to be created for the sole reason of doing a task ONLY once. "job" is how you define that.
+
+## .
+
+
+## ......
+
+### 302.  Why do you need a "cronjob" in Kubernetes?
+
+    Answer: Sometimes there is a need for pod to be created on a regular schedule to do a job. A "cronjob" is great for this use case.
 
 ## .
 
@@ -3203,9 +3212,9 @@
 
 
 
+
 More Unformatted questions:
 __________________________
-Why do you need a  "cronjob" in k8s?
 Where did your have yours hands-on experience on k8s?
 How did you manage logging persistence? Prometheus? Datadog? Agents?
 You just created a cluster. How do you know what;s running there by default
