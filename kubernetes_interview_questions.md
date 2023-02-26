@@ -3249,6 +3249,15 @@
 ## .
 
 
+## ......
+
+### 306.  All I am giving you a docker image (that runs a web server). You don't even have a cluster. Walk me through how you take this service live. Assume that you don't scaling or HA.
+
+    Answer:  Create a cluster. Upload the image one GCP container registry. Creat a YAML file that creates a deployment using that image. Create a service (Type Load Balancer) using that deployment. Create a DNS recording pointing to the endpoint of that service.
+
+## .
+
+
 
 
 
@@ -3260,7 +3269,6 @@
 
 More Unformatted questions:
 __________________________
-All I am giving you a docker image (that runs a web server). You don't even have a cluster. Walk me through how you take this service live. Assume that you don't scaling or HA
 Network policy vs ingress
 You have created a PV using hostpath. How do you know if all is well. ans: describe and status should say "available"
 Can you use 2 PVCs with 1 PV? no! 1:1
