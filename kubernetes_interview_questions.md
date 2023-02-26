@@ -3177,6 +3177,17 @@
 ## .
 
 
+## ......
+
+### 300. How do you service discovery in Kubernetes?
+
+    Answer: 2 Ways: 1. Via DNS or 2. via ENV variable (e.g. SQL_SERVER=1.2.3.4) injected into container via ConfigMap or Secret.
+
+## .
+
+
+
+
 
 
 
@@ -3185,9 +3196,6 @@
 
 More Unformatted questions:
 __________________________
-How do you service discovery in k8s:
-  1. via DNS
-  2. via ENV variable (SQL_SERVER=1.2.3.4) injecte don to container
 Why do you need a "job" in k8s?
 Why do you need a  "cronjob" in k8s?
 Where did your have yours hands-on experience on k8s?
