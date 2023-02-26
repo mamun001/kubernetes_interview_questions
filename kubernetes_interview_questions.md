@@ -3231,6 +3231,13 @@
 ## .
 
 
+## ......
+
+### 305. On a fresh cluster, which namespace holds the system resources like kube-dns?
+
+    Answer: kube-system  (Here the interviwer is probing for your hands on experience. If you work on Kubernetes regularly, you will know this)
+
+## .
 
 
 
