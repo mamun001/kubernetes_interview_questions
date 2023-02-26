@@ -3240,6 +3240,15 @@
 ## .
 
 
+## ......
+
+### 306.  Walk me through the steps of how you store password in Kubernetes? (e.g. DB password)
+
+    Answer:   base64 encoding --> make a secret, "data" section, key-value pair --> mount it on a pod/container
+
+## .
+
+
 
 
 
@@ -3251,8 +3260,6 @@
 
 More Unformatted questions:
 __________________________
-Wlak me through the steps of how you store password in k8s? (e.g. DB password)
-   base64, secret, "data" section, key-value pair, mount it on a pod/container
 All I am giving you a docker image (that runs a web server). You don't even have a cluster. Walk me through how you take this service live. Assume that you don't scaling or HA
 Network policy vs ingress
 You have created a PV using hostpath. How do you know if all is well. ans: describe and status should say "available"
