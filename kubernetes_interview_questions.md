@@ -941,7 +941,7 @@
 #### 84. How do you generate a CSR within the Kubernetes system?
 
      Answer: 
-       a. create a .csr file
+       a. create a .csr file using openssl command (and a private key, but does not matter to Kubernetes)
        b. encode it
        c. create a yaml file (Kind: CertificateSigningRequest) using the encoded CSR
        d. kubectl apply -f CertificateSigningRequest.yaml
@@ -3126,9 +3126,41 @@
 
 
 
+## ......
 
-why do we need labels
-apply failed with errors like "expecting X got Y"
+### 295. Explain the flow from a CSR all the way to a user having permission to describe a pod?
+
+    Answer: 
+    1. CSR is created
+    2. That is submitted to Kubernetes cluster
+    3. Someone approves the csr within Kubernetes. 
+    4. That creates a valid certificate which has an embedded user
+    5. On the other side of things, a role is create with certain permissions (e.g. describe a pod)
+    6. That user/certificate is associated with that role via roleBinding. This completes the path.
+
+## .
+
+
+## ......
+
+### 296. Why do we need Labels?
+
+    Answer: Labels are integral part of Kubernetes. Whenever there is need to select one or more out of many, a label is used. For example, you may have 1000 pods. Only 10 of them belong to a deployment or service. This one to many relationship can dynamicaly established by selecting pods based on their labels. 
+
+## .
+
+
+## ......
+
+### 297. You are applying a YAML file. But, you get an error , something like: "expecting X got Y" (e.g. expecting map, got string).  How do you fix this? 
+
+    Answer: Note the line number the error message tells you. See, which attribute is mentioned in that line. Then, use kubectl explain command to see what type of a thing is expected. May there is supposed to be an array of strings. But, because of a typo, to Kubernetes, it looks like a string or map/object. This will give a great clue as to what the typo is.
+
+## .
+
+
+More Unformatted questions:
+__________________________
 why do we need node pools?
 what is the connection between values.yaml (Helm) and configmaps
 How do you service discovery in k8s:
@@ -3156,12 +3188,6 @@ Once you have MYSQL pods running, how can you make a service out of them?
    use label selector to select pods for backend
 You have 20 nodes. You want to use 10 of then ONLY for production pods. How? taint the nodes
 Pods in pending state. why? nodes tainted or not enough resources left or node affinity set wrong
-
-
-
-
-
-
 
 
 
