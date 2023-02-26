@@ -3168,13 +3168,23 @@
 ## .
 
 
+## ......
+
+### 299. What is the connection between values.yaml (Helm) and configmaps?
+
+    Answer: values.yaml in Helm charts save all the env specific values (lets say , server type, application name etc.). This way, we cna follow DRY principles of coding when we code for multiple environments. These "values" in turn can "feed" the configmaps in Kubernetes environments.
+
+## .
+
+
+
+
 
 
 
 
 More Unformatted questions:
 __________________________
-what is the connection between values.yaml (Helm) and configmaps
 How do you service discovery in k8s:
   1. via DNS
   2. via ENV variable (SQL_SERVER=1.2.3.4) injecte don to container
