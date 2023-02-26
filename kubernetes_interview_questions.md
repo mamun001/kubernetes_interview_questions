@@ -3159,9 +3159,21 @@
 ## .
 
 
+## ......
+
+### 298. Why do we need Node Pools?
+
+    Answer: Node Pools are nodes that share the same configurations (e.g. cpu/memory etc.). What if some of your pods needs more resources and you want those pods to go into only a certian node pool. And, you do not want other normal pods to go into those nodes. In this case, having 2 node pools would be very useful.  Node pools can also be used to segment out usage by different teams/environments/departments. 
+
+## .
+
+
+
+
+
+
 More Unformatted questions:
 __________________________
-why do we need node pools?
 what is the connection between values.yaml (Helm) and configmaps
 How do you service discovery in k8s:
   1. via DNS
