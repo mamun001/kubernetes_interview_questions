@@ -3204,6 +3204,35 @@
 ## .
 
 
+## ......
+
+### 303.  Where did you have your hands-on experience on Kubernetes?
+
+    Answer: Interviwer may not ask this directly, but he or she will want to know how you have the experience that you have. This is because people's experience with Kubernetes vary widely. Be truthful. If your experience is that you have done labs on your own or as part of certification exam prep, state THAT! If you fake the experience, it will show and you will come across as unauthentic. Be ready for this question. 
+
+## .
+
+
+## ......
+
+### 303.  How did you manage logging persistence? 
+
+    Answer: Will depend on your experience. Here are some possibilities: Prometheus, Datadog, Agents, other 3rd party solutions.
+
+## .
+
+
+## ......
+
+### 304.  You just created a cluster. How do you know what is running there by default?
+
+    Answer: k get all -A
+
+## .
+
+
+
+
 
 
 
@@ -3215,9 +3244,6 @@
 
 More Unformatted questions:
 __________________________
-Where did your have yours hands-on experience on k8s?
-How did you manage logging persistence? Prometheus? Datadog? Agents?
-You just created a cluster. How do you know what;s running there by default
 Wlak me through the steps of how you store password in k8s? (e.g. DB password)
    base64, secret, "data" section, key-value pair, mount it on a pod/container
 All I am giving you a docker image (that runs a web server). You don't even have a cluster. Walk me through how you take this service live. Assume that you don't scaling or HA
