@@ -785,7 +785,7 @@
 
        Answer:
          a. first create a yaml file: (dry-run command)
-            kubectl run --generator=run-pod/v1 foo --image=redis --dry-run -o yaml > foo.yaml
+            kubectl run foo --image=redis --dry-run=client -o yaml > foo.yaml
          b. edit the yaml file:
             in the resources section of "spec" section:
             cpu: 2
@@ -1296,7 +1296,7 @@
 
 #### 120. Let's say you know how to run a pod via command line. You can do this very easily because you have done it many times. Given that, how can you quickly generate a YAML file for doing the same thing?
 
-    Answer:  add -o yaml AND --dry-run options to the same command.
+    Answer:  add -o yaml AND --dry-run=client options to the same command.
              This will spit out the YAML file on your terminal.
              You can also redirect that to a file.
 
@@ -2720,7 +2720,7 @@
 
 #### 256. How can you create an YAML file on the fly without creating a resource ?
 
-        Answer:  Use --dry-run option with -o yaml option (kubectl)
+        Answer:  Use --dry-run=client option with -o yaml option (kubectl)
 
 ## . 
 
